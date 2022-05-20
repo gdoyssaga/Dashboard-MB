@@ -9,9 +9,9 @@ function NavigationBar() {
             <nav className="px-2 bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700 drop-shadow-md h-[60px] py-4">
                 <div className="container flex flex-wrap items-center justify-between mx-auto ">
                     <a href="#" className="flex items-center ">
-                        {/* MB logo */}
-                        <img src="/Logo-MB.png" alt="MB logo" className="mr-3 h-6 sm:h-9" />
-                        {/* <svg class="w-6 h-6" alt="Logo" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg> */}
+                        {/*  logo */}
+                        {/* <img src="/.." alt="MB logo" className="mr-3 h-6 sm:h-9" /> */}
+                        <svg class="w-6 h-6" alt="Logo" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white ml-2"> PCS Recruitment | Dashboard</span>
                     </a>
                     <button data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center justify-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="mobile-menu-2" aria-expanded="false">

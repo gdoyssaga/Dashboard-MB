@@ -11,6 +11,43 @@ import Card from '../Components/card'
 import Linegraph from '../Components/linechart'
 import { Weekday} from '../Components/Data'
 import { Perday} from '../Components/Data'
+import { Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend, } from "chart.js";
+
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
+  const options = {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 0,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'right',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Horizontal Bar Chart',
+      },
+    },
+  };
+
+
 
 
 
@@ -31,16 +68,16 @@ export default function HomeDashboard() {
           borderRadius: 5,
           borderSkipped: false,
     }],
-    options: {
-      plugins: {
-          legend: {
-              display: true,
-              labels: {
-                  color: 'rgb(255, 99, 132)'
-              }
-          }
-      }
-  }
+  //   options: {
+  //     plugins: {
+  //         legend: {
+  //             display: true,
+  //             labels: {
+  //                 color: 'rgb(255, 99, 132)'
+  //             }
+  //         }
+  //     }
+  // }
 
 });
 
@@ -64,12 +101,14 @@ const [graph1, setGraph1] = useState({
       //     display: true,
       //     text: 'Custom Chart Title'
       // }
-  }],
-  options: {
-    legend: {
-       display: false //This will do the task
-    }
-}
+  },
+
+],
+//   options: {
+//     legend: {
+//        display: false //This will do the task
+//     }
+// }
 });
 
 
@@ -97,32 +136,35 @@ const [graph1, setGraph1] = useState({
       
     
       {/* BUTTON section*/}
+      <div className="grid mb-8 content-center sm:grid-cols-9 gap-2 " >
       { Button('Today') }
       { Button('Yesterday') }
       { Button('Last 7 days') }
-      { Button('Last 30 days') }
       { Button('Last 30 days') }
       { Button('Last month') }
       { Button('This month') }
       { Button('All time') }
       { Button('Schedule') }
-
+      <img src="/logo.png" alt="picture" className ="h-20"/>
+      </div>
+      
       {/*THE END OF BUTTON SECTION*/}
+   
 
     {/* CARD SECTION */}
     {/* ROW 1 */}
     <div className="grid gap-6 mb-8 content-center md:grid-cols-2 lg:grid-cols-4" >
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
+    {Card('/request.png','1','Total # of Request')}
+    {Card('/pending.png','1','Total # of Request')}
+    {Card('/request.png','1','Total # of Request')}
+    {Card('/pending.png','1','Total # of Request')}
     </div>
     {/* ROW 2 */}
     <div className="grid gap-6 mb-8 content-center md:grid-cols-2 xl:grid-cols-4">
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
-    {Card('1','Total # of Request')}
+    {Card('appointment.png','1','Total # of Request')}
+    {Card('appointment.png','1','Total # of Request')}
+    {Card('response.png','1','Total # of Request')}
+    {Card('response.png','1','Total # of Request')}
     </div>
      {/*THE END OF CARD SECTION*/}
     
@@ -135,7 +177,7 @@ const [graph1, setGraph1] = useState({
         <div className="relative w-full max-w-full pt-3">
     <p>Avg. leads by the weekday(Mo -So)</p>
     <div>
-    <Bargraph chartData={graph}/>
+    <Bargraph chartData={graph} options={options}/>
     </div >
     </div>
     </div>
