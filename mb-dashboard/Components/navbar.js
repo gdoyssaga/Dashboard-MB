@@ -55,21 +55,3 @@ function NavigationBar() {
 export default NavigationBar;
 
 
-
-{/* Bootstrap css */ }
-{/* <nav className="navbar navbar-light bg-light justify-content-between">
-            <span className="font-weight-bold">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt="" />
-           PCS Recruitment | Dashboard</span>
-            
-                <span className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Lorem ipsum
-                    </a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a className="dropdown-item" href="#">Action</a>
-                        <a className="dropdown-item" href="#">Another action</a>
-                        <a className="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </span>
-        </nav> */}
